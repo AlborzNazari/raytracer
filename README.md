@@ -4,9 +4,9 @@ A software raytracer written in C, built chapter by chapter following *The Ray T
 
 No external libraries. Pure C99. Outputs a PPM image you can open in any image viewer.
 
-![Rendered sphere](output/sphere.png)
 
----
+<img width="512" height="512" alt="sphere" src="https://github.com/user-attachments/assets/ab98f93d-fc43-43e2-b4b6-41ea539cb47a" />
+
 
 ## What it renders
 
@@ -16,11 +16,10 @@ A Phong-shaded sphere with a point light, written from scratch:
 - **Diffuse** — surface facing the light is bright, edges fall off
 - **Specular** — glossy highlight based on eye and reflection angle
 
----
+
 
 ## Project structure
 
-```
 raytracer/
   src/
     tuple.h       — points, vectors, colors, dot/cross/reflect
@@ -35,9 +34,9 @@ raytracer/
   Makefile
   LICENSE
   README.md
-```
 
----
+
+
 
 ## Installation
 
@@ -50,11 +49,11 @@ Download the latest **winlibs** build (UCRT runtime, 64-bit, zip):
 
 Extract to `C:\gcc\` then add GCC to your PATH:
 
-```
+
 Windows Search → "Edit the system environment variables"
 → Environment Variables → Path → Edit → New
 → Add: C:\gcc\mingw64\bin
-```
+
 
 Open a new terminal and verify:
 
@@ -85,7 +84,7 @@ mkdir output
 
 This lets you view the rendered `.ppm` image directly inside VS Code without installing anything else.
 
----
+
 
 ### Linux (Ubuntu / Debian)
 
@@ -96,7 +95,7 @@ cd raytracer
 mkdir -p output
 ```
 
----
+
 
 ### macOS
 
@@ -107,7 +106,6 @@ cd raytracer
 mkdir -p output
 ```
 
----
 
 ## Usage
 
@@ -131,7 +129,7 @@ PASSED: 37
 All tests green.
 ```
 
----
+
 
 ### Render the image
 
@@ -151,7 +149,7 @@ Rendering 512x512...
 Saved: output/sphere.ppm
 ```
 
----
+
 
 ### View the result
 
@@ -167,7 +165,7 @@ Saved: output/sphere.ppm
 convert output/sphere.ppm output/sphere.png
 ```
 
----
+
 
 ## Makefile targets (Linux / macOS)
 
@@ -178,7 +176,7 @@ convert output/sphere.ppm output/sphere.png
 | `make test` | Compile and run all 37 tests |
 | `make clean` | Remove binaries and output images |
 
----
+
 
 ## How it works — chapter by chapter
 
@@ -193,7 +191,7 @@ convert output/sphere.ppm output/sphere.png
 
 The render loop in `main.c` fires one ray per pixel from a fixed eye point through a virtual wall. For each hit, it computes the surface normal, then calls `lighting()` to get the pixel color.
 
----
+
 
 ## Customize the scene
 
@@ -217,7 +215,7 @@ PointLight light = point_light(
 const int CANVAS_SIZE = 512;   /* increase to 1024 for higher resolution */
 ```
 
----
+
 
 ## What comes next (Chapters 7–12)
 
@@ -230,7 +228,7 @@ const int CANVAS_SIZE = 512;   /* increase to 1024 for higher resolution */
 | 11 | Reflections — recursive ray bouncing |
 | 12 | Cubes — slab intersection method |
 
----
+
 
 ## License
 
