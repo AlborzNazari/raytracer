@@ -8,7 +8,7 @@ No external libraries. Pure C99. Outputs a PPM image you can open in any image v
 <img width="512" height="512" alt="sphere" src="https://github.com/user-attachments/assets/ab98f93d-fc43-43e2-b4b6-41ea539cb47a" />
 
 
-## What it renders
+##  What it renders
 
 A Phong-shaded sphere with a point light, written from scratch:
 
